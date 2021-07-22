@@ -13,7 +13,7 @@ export default [
                 </>
             ),
         },
-        position: {x: 200, y: 120},
+        position: {x: 150, y: 120},
         className: 'element',
         connectable: true,
         selectable: true,
@@ -28,7 +28,7 @@ export default [
                 </>
             ),
         },
-        position: {x: 200, y: 250},
+        position: {x: 150, y: 250},
         className: 'element',
         connectable: true,
         selectable: true,

@@ -6,6 +6,12 @@ import InternalState from "./internal-state";
 
 const onLoad = (reactFlowInstance) => reactFlowInstance.fitView()
 
+
+/**
+ * @returns {JSX.Element}
+ * desc: just a typical component with some functions and child (InternalState) where is main logic
+ * example copied from https://reactflow.dev/examples/ 😅😅😅😅😅😅
+ */
 const PlayGround = () => {
     const [elements, setElements] = useState(initialElements);
     const onConnect = (params) => setElements((els) => addEdge(params, els));

@@ -81,7 +81,7 @@ const InternalState = () => {
     }, [groupAreas, setSelectedElements, nodes, groupNodes, inners])
     return <>
         <button className='button' onClick={clearInners}>
-            click to clear inner group areas list
+            click to clear inner group areas list ( length: {inners.length} )
         </button>
     </>
 }

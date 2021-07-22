@@ -8,21 +8,21 @@ import {useEffect} from "react";
  * these midpoints fall between those 4 points which we call the grouping area
  */
 
+
 const InternalState = () => {
-    // reg: https://reactflow.dev/docs/api/internal-state-actions/
     const {nodes} = useStoreState((store) => store)
+
     const {setSelectedElements} = useStoreActions((actions) => actions)
 
     // grouping node elType is groupArea, so I take this node from react-flow story
     const groupArea = nodes.find(({elType}) => elType === 'groupArea')
     useEffect(() => {
         if (groupArea?.__rf.isDragging) {
-            const rf = groupArea.__rf
             const rect = {
-                a1: rf.position.x,
-                a2: rf.position.x + rf.width,
-                a3: rf.position.y,
-                a4: rf.position.y + rf.height
+                a1: groupArea.__rf.position.x,
+                a2: groupArea.__rf.position.x + groupArea.__rf.width,
+                a3: groupArea.__rf.position.y,
+                a4: groupArea.__rf.position.y + groupArea.__rf.height
             }
             setSelectedElements(nodes.filter((node) => {
                 if (node.elType !== '+') {

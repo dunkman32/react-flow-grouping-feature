@@ -13,7 +13,7 @@ export default [
                 </>
             ),
         },
-        position: {x: 250, y: 0},
+        position: {x: 200, y: 120},
         className: 'element',
         connectable: true,
         selectable: true,
@@ -28,7 +28,7 @@ export default [
                 </>
             ),
         },
-        position: {x: 100, y: 100},
+        position: {x: 200, y: 250},
         className: 'element',
         connectable: true,
         selectable: true,
@@ -41,7 +41,7 @@ export default [
                     <strong>I don't join in any group</strong>
             ),
         },
-        position: {x: 200, y: 100},
+        position: {x: 260, y: 0},
         className: 'element-dont',
         connectable: true,
     },
@@ -56,6 +56,25 @@ export default [
             ),
         },
         className: 'grouping-area',
-        position: {x: 400, y: 100},
+        position: {x: 250, y: 100},
+        connectable: true,
+    },
+    {
+        id: 'e1-2',
+        source: '1',
+        target: '2',
+        type: 'step',
+        style: { stroke: 'cornflowerblue' },
+        animated: true,
+        labelStyle: { fill: 'cornflowerblue', fontWeight: 700 },
+    },
+    {
+        id: 'e3-4',
+        source: '3',
+        target: '4',
+        type: 'step',
+        style: { stroke: '#222138' },
+        animated: true,
+        labelStyle: { fill: '#222138', fontWeight: 700 },
     },
 ];
